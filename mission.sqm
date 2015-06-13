@@ -76,15 +76,16 @@ class Mission
 		"a3_characters_f_beta",
 		"a3_characters_f_gamma",
 		"a3_characters_f",
-		"A3_Data_F"
+		"A3_Data_F",
+		"A3_Structures_F_EPC_Civ_Accessories"
 	};
 	addOnsAuto[]=
 	{
-		"A3_Characters_F_Civil",
-		"a3_characters_f",
 		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_INDEP",
+		"A3_Characters_F_Civil",
 		"A3_Structures_F_Households_House_Small01",
 		"A3_Structures_F_Households_House_Small02",
 		"A3_Structures_F_Households_Stone_Big",
@@ -120,13 +121,14 @@ class Mission
 		"A3_Structures_F_Ind_Shed",
 		"A3_Structures_F_Naval_Piers",
 		"A3_Structures_F_Households_House_Big01",
+		"A3_Structures_F_EPC_Civ_Accessories",
 		"a3_map_stratis"
 	};
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="A3Wasteland Stratis v1.1"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
-		overviewText="Wasteland survival sandbox by Team Wasteland - visit A3Wasteland.com for more details";
+		briefingName="A3Wasteland Stratis v1.1 - TeamSpeak 188.228.38.201";
+		overviewText="A3Wasteland Stratis v1.1 - TeamSpeak 188.228.38.201";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
 		startWeather=0;
@@ -1219,7 +1221,7 @@ class Mission
 					id=95;
 					side="EAST";
 					vehicle="O_engineer_F";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					skill=0.60000002;
 				};
 			};
@@ -4815,7 +4817,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=151;
+		items=157;
 		class Item0
 		{
 			position[]={4339.3457,226.45149,3824.2236};
@@ -5976,6 +5978,118 @@ class Mission
 			name="respawn_civilian";
 			type="Empty";
 			colorName="ColorCIV";
+		};
+		class Item151
+		{
+			position[]={2003.0234,2.9516211,2718.4424};
+			name="Safezone1";
+			type="Empty";
+			colorName="ColorBlack";
+		};
+		class Item152
+		{
+			position[]={6569.7983,48.687981,5050.3022};
+			name="Safezone2";
+			type="Empty";
+			colorName="ColorBlack";
+		};
+		class Item153
+		{
+			position[]={3040.9063,3.3499999,5992.4453};
+			name="Safezone3";
+			type="Empty";
+			colorName="ColorBlack";
+		};
+		class Item154
+		{
+			position[]={6569.8057,48.680592,5049.7524};
+			name="SafeZone2_Marker";
+			text="SafeZone";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="SolidBorder";
+			a=25;
+			b=25;
+			drawBorder=1;
+		};
+		class Item155
+		{
+			position[]={3040.6733,3.3499999,5991.6182};
+			name="SafeZone3_Marker";
+			text="SafeZone";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="SolidBorder";
+			a=25;
+			b=25;
+			drawBorder=1;
+		};
+		class Item156
+		{
+			position[]={2003.2301,2.9609301,2718.1836};
+			name="SafeZone1_Marker";
+			text="SafeZone";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorBlack";
+			fillName="SolidBorder";
+			a=25;
+			b=25;
+			drawBorder=1;
+		};
+	};
+	class Sensors
+	{
+		items=3;
+		class Item0
+		{
+			position[]={2003.2301,2.9609301,2718.1836};
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="safezone1";
+			expCond="(player distance safezone1) < 25;";
+			expActiv="hint ""You are entering a safe zone!"";player allowDamage false;";
+			expDesactiv="hint ""Now leaving the safe zone!"";player allowDamage true;";
+			class Effects
+			{
+				sound="FD_CP_Clear_F";
+			};
+		};
+		class Item1
+		{
+			position[]={6569.8057,48.680592,5049.7524};
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="safezone2";
+			expCond="(player distance safezone2) < 25;";
+			expActiv="hint ""You are entering a safe zone!"";player allowDamage false;";
+			expDesactiv="hint ""Now leaving the safe zone!""; player allowDamage true;";
+			class Effects
+			{
+				sound="FD_CP_Clear_F";
+			};
+		};
+		class Item2
+		{
+			position[]={3040.6733,3.3499999,5991.6182};
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="safezone3";
+			expCond="(player distance safezone3) < 25;";
+			expActiv="hint ""You are entering a safe zone!""; player allowdamage false;";
+			expDesactiv="hint ""Now leaving the safe zone!""; player allowDamage true;";
+			class Effects
+			{
+				sound="FD_CP_Clear_F";
+			};
 		};
 	};
 };

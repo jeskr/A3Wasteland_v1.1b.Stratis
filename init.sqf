@@ -73,3 +73,9 @@ if (isServer) then
 [] execVM "addons\proving_ground\init.sqf";
 [] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 [] execVM "addons\JumpMF\init.sqf";
+//[] execVM "addons\scripts\fn_statusBar.sqf"; // Status Bar
+if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"};  // Status Bar
+[] execVM "addons\safezone\safezone.sqf"; //safezones
+[] execVM "addons\scripts\intro.sqf";	// Welcome intro
+[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";	// Keypad for base locking
+[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";  // AirDrop

@@ -107,6 +107,7 @@ R3F_LOG_CFG_transporteurs =
 
 R3F_LOG_CFG_objets_transportables =
 [
+	["Land_Device_assembled_F", 10], //Re Locker
 	["StaticWeapon", 5],
 	["Box_NATO_AmmoVeh_F", 10],
 	["B_supplyCrate_F", 5],
@@ -151,6 +152,7 @@ R3F_LOG_CFG_objets_transportables =
 	["Land_Obstacle_Ramp_F", 5],
 	["Land_Pipes_large_F", 5],
 	["Land_RampConcreteHigh_F", 6],
+	["BlockConcrete_F", 6],
 	["Land_RampConcrete_F", 5],
 	["Land_Razorwire_F", 5],
 	["Land_Sacks_goods_F", 2],
@@ -165,6 +167,7 @@ R3F_LOG_CFG_objets_transportables =
 
 R3F_LOG_CFG_objets_deplacables =
 [
+	"Land_Device_assembled_F", //relocker
 	"StaticWeapon",
 	"ReammoBox_F",
 	"Kart_01_Base_F",
@@ -208,6 +211,7 @@ R3F_LOG_CFG_objets_deplacables =
 	"Land_Obstacle_Ramp_F",
 	"Land_Pipes_large_F",
 	"Land_RampConcreteHigh_F",
+	"BlockConcrete_F",
 	"Land_RampConcrete_F",
 	"Land_Razorwire_F",
 	"Land_Sacks_goods_F",

@@ -73,6 +73,16 @@ if (_uid call isAdmin) then
 				{
 					execVM "client\systems\adminPanel\toggleGodMode.sqf";
 				};
+				case 8: // Teleport player to me
+				{
+				    closeDialog 0;
+					execVM "client\systems\adminPanel\tptome.sqf";
+				};
+				case 9: // Teleport me to player
+				{
+				    closeDialog 0;
+					execVM "client\systems\adminPanel\tpmeto.sqf";
+				};
 			};
 		};
 		case (!isNull _displayDebug): //Debug panel
