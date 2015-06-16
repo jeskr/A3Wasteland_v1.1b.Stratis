@@ -79,3 +79,12 @@ if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"};  // Status Ba
 [] execVM "addons\scripts\intro.sqf";	// Welcome intro
 [] execVM "addons\AF_Keypad\AF_KP_vars.sqf";	// Keypad for base locking
 [] execVM "addons\APOC_Airdrop_Assistance\init.sqf";  // AirDrop
+[] execVM "addons\HvT\HvT.sqf"; // High Value Target
+
+//Client Announcements
+if (!(isServer)) then 
+{
+ClientPreComp_AnnounceMessages = compileFinal preprocessFileLineNumbers "addons\announceMessages\client_AnnounceMessages.sqf";
+
+[] call ClientPreComp_AnnounceMessages;
+};

@@ -8,6 +8,7 @@ _messages = [
 	["Teamspeak IP", "188.228.38.201"],
 	["Rules", "Check the Server Rules under Map."],
 	["ATM / Bank", "You can use any of the 5 ATM´s found in Stratis."],
+	["HvT", "High value targets with more than 60K are marked on the map with 60 secs. interval"],
 	["Earplugs", "Put in/out your earplugs by using the END key."],
 	["Service Vehicle", "Enter any store to service your vehicle (Refuel-Repair-Rearm)."],
 	["Safe-zones", "All general stores have a safe zone (A beep sounds entering/leaving)."],
